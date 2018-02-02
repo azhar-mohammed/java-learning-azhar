@@ -6,5 +6,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>code-refactor</module>
+  	<module>CsvSplitter</module>
   </modules>
 </project>
