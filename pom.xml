@@ -7,5 +7,6 @@
   <modules>
   	<module>code-refactor</module>
   	<module>CsvSplitter</module>
+  	<module>WikiGenerator</module>
   </modules>
 </project>
