@@ -40,7 +40,7 @@ public class Rental implements Serializable {
 	}
 
 	public double getRentAmount() {
-		// determine amounts for each book.
+
 		return getBook().fetchPrice(getDaysRented());
 	}
 

@@ -24,7 +24,6 @@ public class NonFictionalBook extends Book {
 
 	@Override
 	public int getPoints(int rentedDays) {
-		// TODO Auto-generated method stub
 		return 1;
 	}
 }
