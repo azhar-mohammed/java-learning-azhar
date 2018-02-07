@@ -22,6 +22,7 @@ public class CsvFileParser implements ParserInterface {
 				.filter(word->word.length()>2)
 				.collect(Collectors.toSet());
 		wordsList.addAll(uniqueWordsSet);
+		
 			
 		return wordsList;
 	}
