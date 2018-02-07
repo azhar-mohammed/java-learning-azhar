@@ -8,5 +8,6 @@
   	<module>code-refactor</module>
   	<module>CsvSplitter</module>
   	<module>WikiGenerator</module>
+  	<module>WordCount</module>
   </modules>
 </project>
