@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * Represent a customer renting a book.
  * 
- * @author chandrashekarv
+ * @author azharm
  *
  */
 public class Rental implements Serializable {
@@ -41,14 +41,13 @@ public class Rental implements Serializable {
 
 	public double getRentAmount() {
 
-		return getBook().fetchPrice(getDaysRented());
+		return book.fetchPrice(daysRented);
 	}
 
 	public int getPoints() {
 
-		return getBook().getPoints(getDaysRented());
+		return book.getPoints(daysRented);
 
-		
 	}
 
 }

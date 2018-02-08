@@ -10,7 +10,7 @@ import java.util.List;
  * Customer class that denotes customer details as well as customer related
  * operations.
  * 
- * @author chandrashekarv
+ * @author azharm
  *
  */
 public class Customer implements Serializable {
@@ -25,31 +25,6 @@ public class Customer implements Serializable {
 	public Customer(String name) {
 		super();
 		this.name = name;
-	}
-
-	public String fetchStatement() {
-
-		double totalAmount = 0;
-		int frequentRenterPoints = 0;
-		Iterator<Rental> rentalsItr = rentals.listIterator();
-		StringBuilder result = new StringBuilder("Rental Record for " + getName() + "\n");
-
-		while (rentalsItr.hasNext()) {
-
-			Rental rental = (Rental) rentalsItr.next();
-
-			frequentRenterPoints += rental.getPoints();
-
-			// show figures for this rental
-			result.append("\t").append(rental.getBook().getTitle()).append("\t")
-					.append(String.valueOf(rental.getRentAmount())).append("\n");
-			totalAmount += rental.getRentAmount();
-		}
-
-		result.append("Amount owed is ").append(String.valueOf(totalAmount)).append("\n");
-		result.append("You earned ").append(String.valueOf(frequentRenterPoints)).append(" frequent renter points");
-
-		return result.toString();
 	}
 
 	public long getId() {
@@ -74,6 +49,39 @@ public class Customer implements Serializable {
 
 	public void addRental(final Rental rental) {
 		getRentals().add(rental);
+	}
+
+	/**
+	 * Calculates and returns the statement
+	 * 
+	 * @return
+	 */
+
+	public String fetchStatement() {
+
+		double totalAmount = 0;
+		int frequentRenterPoints = 0;
+		Iterator<Rental> rentalsItr = rentals.listIterator();
+		StringBuilder result = new StringBuilder("Rental Record for " + name + "\n");
+
+		while (rentalsItr.hasNext()) {
+
+			Rental rental = (Rental) rentalsItr.next();
+
+			// calculating the frequent renter point
+			frequentRenterPoints += rental.getPoints();
+
+			// show figures for this rental
+			result.append("\t").append(rental.getBook().getTitle()).append("\t")
+					.append(String.valueOf(rental.getRentAmount())).append("\n");
+			// calculating the total rental amount
+			totalAmount += rental.getRentAmount();
+		}
+
+		result.append("Amount owed is ").append(String.valueOf(totalAmount)).append("\n");
+		result.append("You earned ").append(String.valueOf(frequentRenterPoints)).append(" frequent renter points");
+
+		return result.toString();
 	}
 
 }

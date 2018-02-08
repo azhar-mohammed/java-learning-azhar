@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * Book : Simple data class representing Book data.
  * 
- * @author chandrashekarv
+ * @author azharm
  *
  */
 public abstract class Book implements Serializable {
