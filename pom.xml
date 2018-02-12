@@ -10,5 +10,6 @@
   	<module>WikiGenerator</module>
   	<module>WordCount</module>
   	<module>LruCache</module>
+  	<module>Generics</module>
   </modules>
 </project>
