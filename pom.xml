@@ -11,5 +11,6 @@
   	<module>WordCount</module>
   	<module>LruCache</module>
   	<module>Generics</module>
+  	<module>AutoSuggest</module>
   </modules>
 </project>
