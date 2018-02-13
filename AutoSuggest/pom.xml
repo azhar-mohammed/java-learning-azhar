@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>AutoSuggest</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.learning</groupId>
+  		<artifactId>WikiGenerator</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>
